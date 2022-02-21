@@ -4,7 +4,8 @@ import {UserContext} from '../../Context/UserContext'
 import EditUserForm from '../../Comps/EditUser/EditUserForm';
 
 export default function Home() {
-  const {users, RemoveUser} = useContext(UserContext); 
+  const {users, RemoveUser} = useContext(UserContext);
+
   const [user, SetUser] = useState(null);
   const [isEditVisible, SetIsEditVisible] = useState(false);
 
@@ -22,9 +23,9 @@ export default function Home() {
     <div>
         <table>
           {
-          users.map((user)=>
+          users.map((user, index)=>
           user.email!=`admin@admin.com` ?
-          <tr>
+          <tr key={index}>
             <td>
               {user.firstName}
             </td>
@@ -43,6 +44,7 @@ export default function Home() {
           }
         </table>
         {isEditVisible ? <EditUserForm user={user} setUser={SetUser} setVisibility={SetIsEditVisible}/> : null}
+        {/*הצגת טופס העריכה במידה והאדמין לחץ על עדכון פרטים */}
     </div>
   )
 }

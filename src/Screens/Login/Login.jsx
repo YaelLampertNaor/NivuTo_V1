@@ -14,9 +14,6 @@ export default function Login(props) {
     //למטה: אתחול יוז סטייט של מערך אובייקטים המכיל אובייקטים של יוזר
     
     function LoginBtnClick() {
-        //בדיקה אם יוזר קיים
-        //מעבר לדף פרופיל
-        //בדיקה אם היוזר אדמין ובמידה וכן מעבר לדף אדמין
             let result = FindUser(email, password)
             if (!result){
                 alert(`No match`);

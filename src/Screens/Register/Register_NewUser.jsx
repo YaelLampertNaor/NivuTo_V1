@@ -10,7 +10,6 @@ export default function Register_NewUser(props) {
     const {AddUser} = useContext(UserContext);
 
     const [school, setSchool] = useState(`1`);
-
     const [user, setUser] = useState({ firstName: ``, lastName: ``, email: ``, password: ``, phone: `` })
 
     function registerBtnClick(e) {
@@ -100,37 +99,10 @@ export default function Register_NewUser(props) {
                         <td><label for="floatingPassword"></label>הזן סיסמא:</td>
                         <td><input value={user.password} onChange={(e) => { setUser((prev) => ({ ...prev, password: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="password" class="form-control" id="floatingPassword" placeholder="בחר סיסמא" /></td>
                     </tr>
-                    {/* <div class="form-floating">
-                <label for="floatingPasswordVerify"></label>
-                <input style={{marginTop:'15px'}} type="password" class="form-control" id="floatingPasswordVerify" placeholder="הזן סיסמא בשנית"/>
-            </div> */}
                     <tr>
                         <td><label for="floatingPhone"></label>טלפון:</td>
                         <td><input value={user.phone} onChange={(e) => { setUser((prev) => ({ ...prev, phone: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="text" class="form-control" id="floatingPhone" placeholder="טלפון" /></td>
                     </tr>
-                    {/* <select class="form-select" id="floatingPrefix" aria-label="Floating label select example">
-                    <option selected>קידומת</option>
-                    <option value="1">051</option>
-                    <option value="2">052</option>
-                    <option value="3">053</option>
-                    <option value="4">054</option>
-                    <option value="5">055</option>
-                    <option value="6">057</option>
-                    <option value="7">058</option>
-                    <option value="8">02</option>
-                    <option value="9">03</option>
-                    <option value="10">04</option>
-                    <option value="11">08</option>
-                </select> */}
-                    {/* <div class="form-floating" style={{marginTop:'15px'}}>
-                <select class="form-select" id="floatingGender" aria-label="Floating label select example">
-                    <option selected>מין</option>
-                    <option value="1">זכר</option>
-                    <option value="2">נקבה</option>
-                    <option value="3">לא רוצה לציין</option>
-                </select>
-                <label for="floatingGender"></label>
-            </div> */}
                 </table>
                 <br />
                 <div class="form-floating" style={{ display: 'flex', flexDirection: 'column', width: '150px' }}>

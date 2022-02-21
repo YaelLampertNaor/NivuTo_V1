@@ -4,6 +4,7 @@ import { UserContext } from '../../Context/UserContext'
 
 export default function Profile(props) {
     const {currentUser} = useContext(UserContext);
+    
     const [sety1, setSety1] = useState([{
         day: `א'`,
         start: `08:00`,

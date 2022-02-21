@@ -18,7 +18,7 @@ export default function EditUserForm(props) {
                     </tr>
                     <tr>
                         <td><label for="floatingEmail">אימייל:</label></td>
-                        <td><input value={props.user.email} onChange={(e) => { props.setUser((prev) => ({ ...prev, email: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="email" class="form-control" id="floatingEmail" placeholder="אימייל" /></td>
+                        <td><input readOnly={true} value={props.user.email} onChange={(e) => { props.setUser((prev) => ({ ...prev, email: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="email" class="form-control" id="floatingEmail" placeholder="אימייל" /></td>
                     </tr>
                     <tr>
                         <td><label for="floatingPassword"></label>הזן סיסמא:</td>

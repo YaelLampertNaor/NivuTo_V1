@@ -66,7 +66,6 @@ export default function UserContextProvider(props) {
         })
 
         SetUsers(allUsers);
-        SetCurrentUser(userToUpdate);
     }
 
     return (

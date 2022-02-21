@@ -12,9 +12,6 @@ export default function Main_Layout() {
       <main>
         <Main_Routes />
         </main>
-      <div style={{ display: 'flex', justifySelf: 'flex-end' }}>
-        {/* <Footer /> */}
-      </div>
     </div>
   );
 }
