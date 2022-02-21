@@ -1,0 +1,49 @@
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Profile from '../Profile/Profile';
+import {UserContext} from '../../Context/UserContext';
+
+export default function Login(props) {
+    //מאפשר לנו להשתמש בפונקציה פיינד יוזר מתוך הקונטקסט יוזר קונטקסט
+    const {FindUser}=useContext(UserContext);
+    //אתחול משתנה קבוע של ניווט
+    const navigate = useNavigate();
+    //אתחול יוז סטייטים קבועים
+    const [email, setEmail] = useState(``)
+    const [password, setPassword] = useState(``)
+    //למטה: אתחול יוז סטייט של מערך אובייקטים המכיל אובייקטים של יוזר
+    
+    function LoginBtnClick() {
+        //בדיקה אם יוזר קיים
+        //מעבר לדף פרופיל
+        //בדיקה אם היוזר אדמין ובמידה וכן מעבר לדף אדמין
+            let result = FindUser(email, password)
+            if (!result){
+                alert(`No match`);
+                return;
+            }
+            if(result && email === `admin@admin.com`){
+                navigate(`/adminHome`);
+            }
+            else{
+                navigate(`/profile`);
+            }
+    };
+
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', marginTop:'10px'}}>
+            <h1>כניסת משתמש</h1>
+            <div style={{borderStyle:'groove', padding:'50px'}}>
+            <div class="form-floating mb-3">
+                <input style={{borderRadius:'7%'}} onChange={event => setEmail(event.target.value)} value={email} type="email" id="loginEmail" class="form-control" placeholder="אימייל" />
+                <label for="loginEmail"></label>
+            </div>
+            <div class="form-floating" style={{ marginTop: '15px' }}>
+                <input style={{borderRadius:'7%'}} onChange={event => setPassword(event.target.value)} value={password} type="password" id="loginPassword" class="form-control" placeholder="סיסמא" />
+                <label for="loginPassword"></label>
+            </div>
+            <button style={{ blockSize: '30px', width: '50px', marginRight: '60px', marginTop: '20px' }} class="btn btn-primary" onClick={LoginBtnClick}>כניסה</button>
+            </div>
+        </div>
+    )
+}
