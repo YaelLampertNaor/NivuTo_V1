@@ -16,6 +16,7 @@ export default function Register_NewUser(props) {
         if(AddUser(user))
             {
                 alert(`נרשמת בהצלחה`)
+                alert(user.lastName)
                 navigate(`/login`)
             }
         else{
@@ -51,7 +52,7 @@ export default function Register_NewUser(props) {
         return (
             <div class="form-floating" id="academyTrue" style={{ textAlign: 'right', visibility: '' }}>
                 <div class="form-floating">
-                    <select class="form-select" style={{borderRadius:'7%'}} id="floatingAcademyYear" aria-label="Floating label select example">
+                    <select class="form-select" style={{borderRadius:'7%', height:'55px'}} id="floatingAcademyYear" aria-label="Floating label select example">
                         <option selected>שנת לימודים</option>
                         <option value="1">א'</option>
                         <option value="2">ב'</option>
@@ -75,46 +76,45 @@ export default function Register_NewUser(props) {
     }
 
     return (<div>
-        <h1 style={{ textAlign: 'center' }}>הרשמה לאתר</h1>
-        <div style={{borderStyle:'groove', padding:'50px'}}>
+        <h1 style={{ textAlign: 'center', marginTop:'15px' }}>הרשמה לאתר</h1>
+        <div style={{borderStyle:'groove', display:'flex', paddingRight:'100px', paddingLeft:'100px'}}>
             <form style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <table>
                     <tr>
-                        <td><label for="floatingFirstName">שם פרטי: </label></td>
+                        <td><label for="floatingFirstName"></label></td>
                         <td><input value={user.firstName} onChange={(e) => { setUser((prev) => ({ ...prev, firstName: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="text" class="form-control" id="floatingFirstName" placeholder="שם פרטי" /></td>
                     </tr>
                     <tr>
-                        <td><label for="floatingLastName"></label>שם משפחה:</td>
-                        <td><input value={user.laststName} onChange={(e) => { setUser((prev) => ({ ...prev, laststName: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="text" class="form-control" id="floatingLastName" placeholder="שם משפחה" /></td>
+                        <td><label for="floatingLastName"></label></td>
+                        <td><input value={user.lastName} onChange={(e) => { setUser((prev) => ({ ...prev, lastName: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="text" class="form-control" id="floatingLastName" placeholder="שם משפחה" /></td>
                     </tr>
                     <tr>
-                        <td><label for="floatingDOB">תאריך לידה: </label></td>
-                        <input style={{ marginLeft: '0px', marginTop: '15px', width: '165px', borderRadius:'7%' }} type="date" class="form-control" id="floatingDOB" />
+                        <td><label for="floatingDOB"></label></td>
+                        <input style={{ marginLeft: '0px', marginTop: '15px', width: '210px', borderRadius:'7%' }} type="date" class="form-control" id="floatingDOB" />
                     </tr>
                     <tr>
-                        <td><label for="floatingEmail">אימייל:</label></td>
+                        <td><label for="floatingEmail"></label></td>
                         <td><input value={user.email} onChange={(e) => { setUser((prev) => ({ ...prev, email: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="email" class="form-control" id="floatingEmail" placeholder="אימייל" /></td>
                     </tr>
                     <tr>
-                        <td><label for="floatingPassword"></label>הזן סיסמא:</td>
+                        <td><label for="floatingPassword"></label></td>
                         <td><input value={user.password} onChange={(e) => { setUser((prev) => ({ ...prev, password: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="password" class="form-control" id="floatingPassword" placeholder="בחר סיסמא" /></td>
                     </tr>
                     <tr>
-                        <td><label for="floatingPhone"></label>טלפון:</td>
+                        <td><label for="floatingPhone"></label></td>
                         <td><input value={user.phone} onChange={(e) => { setUser((prev) => ({ ...prev, phone: e.target.value })) }} style={{ marginTop: '15px', borderRadius:'7%' }} type="text" class="form-control" id="floatingPhone" placeholder="טלפון" /></td>
                     </tr>
                 </table>
                 <br />
                 <div class="form-floating" style={{ display: 'flex', flexDirection: 'column', width: '150px' }}>
                     <h4>הזן פרטי לימודים:</h4>
-                    <select onChange={(e) => { setSchool(e.target.value) }} style={{borderRadius:'7%'}} class="form-select" id="floatingStudentType" aria-label="Floating label select example">
+                    <select onChange={(e) => { setSchool(e.target.value) }} style={{borderRadius:'7%', height:'65px', width: '180px', marginBottom:'20px', display:'flex', alignSelf:'center'}} class="form-select" id="floatingStudentType" aria-label="Floating label select example">
                         <option value="1">המרכז האקדמי</option>
                         <option value="2">ביה"ס להנדסאים</option>
                     </select>
-                    <label for="floatingStudentType"></label>
                 </div>
                 {school === `1` ? ShowAcademyOption() : ShowEngineerOption()}
-                <button onClick={registerBtnClick} style={{ width: '100px', marginTop: '30px' }}>הרשמה</button>
+                <button className='btn btn-primary' onClick={registerBtnClick} style={{ width: '100px', marginTop: '30px' }}>הרשמה</button>
             </form>
         </div>
     </div >

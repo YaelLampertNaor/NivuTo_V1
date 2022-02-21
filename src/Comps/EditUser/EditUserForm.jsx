@@ -30,7 +30,7 @@ export default function EditUserForm(props) {
                     </tr>
                 </table>
                 <br />
-                <button onClick={()=>{
+                <button className='btn btn-primary' onClick={()=>{
                     EditUser(props.user);
                     props.setVisibility(false);
                     }} style={{ width: '100px', marginTop: '30px' }}>עדכון</button>

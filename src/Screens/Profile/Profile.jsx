@@ -4,7 +4,7 @@ import { UserContext } from '../../Context/UserContext'
 
 export default function Profile(props) {
     const {currentUser} = useContext(UserContext);
-    
+
     const [sety1, setSety1] = useState([{
         day: `א'`,
         start: `08:00`,
@@ -39,12 +39,13 @@ export default function Profile(props) {
 
     return (
         <div className='container'>
-            <img src="http://www.mcicon.com/wp-content/uploads/2020/12/Education_Student_1-copy.jpg" style={{ blockSize: '190px', borderRadius: '100px', border: '1px solid black', display: 'flex', flexDirection: 'row', justifyContent: 'center' }} class="img-thumbnail" alt="Add profile picture"></img>
-            <p className='h1'>שלום {currentUser.firstName},</p>
+            <img src="https://www.pngitem.com/pimgs/m/638-6381558_time-shift-software-flat-icon-student-girl-hd.png" style={{ blockSize: '190px', borderRadius: '100px', border: '1px solid black', display: 'flex', flexDirection: 'row', justifyContent: 'center', marginTop:'25px', marginBottom:'15px' }} class="img-thumbnail" alt="Add profile picture"></img>
+            <p className='h6'>שלום {currentUser.firstName},</p>
             <br />
             <br />
-            <p className='h1'>מערכת השעות שלך:</p>
-            <Table style={{width:`150%`}}>
+            <div>
+            <p className='h6'>מערכת השעות שלך:</p>
+            <Table style={{width:`120%`}}>
                 <thead>
                     <tr>
                         <th style={{ textAlign:'right' }}>שיעור</th>
@@ -66,6 +67,7 @@ export default function Profile(props) {
                     )}
                 </tbody>
             </Table>
+            </div>
         </div>
     )
 };

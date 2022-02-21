@@ -7,19 +7,27 @@ export default function UserContextProvider(props) {
     //create the users array for the system + create a function that can change the users array 
     const [users, SetUsers] = useState([
         {
-            firstName: `Daniel`,
-            lastName: `Arzouan`,
+            firstName: `דניאל`,
+            lastName: `ארזואן`,
             dob: `2000-11-11`,
             email:`daniel@daniel.com`,
             password: `abc123`,
             phone:`111111111`
         },
         {
-            firstName: `Yael`,
-            lastName: `Naor`,
+            firstName: `יעל`,
+            lastName: `נאור`,
             dob: `2000-05-03`,
             email:`yael@yael.com`,
             password: `abc111`,
+            phone:`222222222`
+        },
+        {
+            firstName: `כיכר`,
+            lastName: `רבין`,
+            dob: `2000-05-03`,
+            email:`kikar@kikar.com`,
+            password: `abc222`,
             phone:`222222222`
         },
         {

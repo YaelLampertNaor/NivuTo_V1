@@ -33,13 +33,13 @@ export default function Login(props) {
             <div style={{borderStyle:'groove', padding:'50px'}}>
             <div class="form-floating mb-3">
                 <input style={{borderRadius:'7%'}} onChange={event => setEmail(event.target.value)} value={email} type="email" id="loginEmail" class="form-control" placeholder="אימייל" />
-                <label for="loginEmail"></label>
+                <label for="loginEmail">אימייל:</label>
             </div>
             <div class="form-floating" style={{ marginTop: '15px' }}>
                 <input style={{borderRadius:'7%'}} onChange={event => setPassword(event.target.value)} value={password} type="password" id="loginPassword" class="form-control" placeholder="סיסמא" />
-                <label for="loginPassword"></label>
+                <label for="loginPassword">סיסמא:</label>
             </div>
-            <button style={{ blockSize: '30px', width: '50px', marginRight: '60px', marginTop: '20px' }} class="btn btn-primary" onClick={LoginBtnClick}>כניסה</button>
+            <button style={{ blockSize: '40px', width: '70px', marginRight: '60px', marginTop: '20px' }} class="btn btn-primary" onClick={LoginBtnClick}>כניסה</button>
             </div>
         </div>
     )

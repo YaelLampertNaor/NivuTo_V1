@@ -15,10 +15,10 @@ export default function Header() {
         <span>
           <Link to="/">דף הבית</Link>
         </span>
-        <span style={{marginRight:'30px'}}>
+        <span style={{marginRight:'50px'}}>
           <Link to="/login">כניסה</Link>
         </span>
-        <span style={{marginRight:'30px'}}>
+        <span style={{marginRight:'50px'}}>
           <Link to="/register">הרשמה</Link>
         </span>
       </div>

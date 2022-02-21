@@ -20,23 +20,24 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div style={{textAlign:'center'}}>
+      <h1 style={{marginTop:'15px'}}>טבלת משתמשים</h1>
         <table>
           {
           users.map((user, index)=>
           user.email!=`admin@admin.com` ?
-          <tr key={index}>
-            <td>
+          <tr key={index} style={{}}>
+            <td style={{paddingLeft:'20px', marginTop:'15px'}}>
               {user.firstName}
             </td>
-            <td>
+            <td style={{paddingLeft:'20px', marginTop:'15px'}}>
               {user.lastName}
             </td>
-            <td>
+            <td style={{paddingLeft:'20px', marginTop:'15px'}}>
               {user.email}
             </td>
-            <button className='btn btn-primary' onClick={()=>{ShowEdit(user)}}>עדכן פרטים</button>
-            <button className='btn btn-danger' onClick={()=>{DeleteUser(user)}}>X</button>
+            <button className='btn btn-primary' style={{marginTop:'15px', marginLeft:'20px'}} onClick={()=>{ShowEdit(user)}}>עדכן פרטים</button>
+            <button className='btn btn-danger' style={{marginLeft:'20px', marginTop:'15px'}} onClick={()=>{DeleteUser(user)}}>X</button>
           </tr>
           :
           null
