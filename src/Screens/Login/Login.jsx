@@ -28,7 +28,7 @@ export default function Login(props) {
     };
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', marginTop:'10px'}}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems:'center', marginTop:'10px'}}>
             <h1>כניסת משתמש</h1>
             <div style={{borderStyle:'groove', padding:'50px'}}>
             <div class="form-floating mb-3">
