@@ -13,7 +13,7 @@ export default function Main(props) {
 
   return <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
 
-      <h1 style={{marginTop:'220px', color:'black'}}>NivuTo</h1>
+      <h1 style={{marginTop:'180px', color:'black', fontFamily:'Redressed, cursive', fontSize:'5rem'}}>NivuTo</h1>
       <p style={{textAlign:'center', color:'white', width:'40%', borderStyle:'groove', padding:'50px'}}>רוב עולם אפליקציות הניווט מתעסק בניווט ברכב פרטי,
 בתחבורה ציבורית, בערים ובכבישים, בעלי פונקציונאליות הקשורה לעומסי תנועה ועצירות מתוכננות בזמן נסיעה.
 חלק מהאפליקציות הן בתשלום, ורובן דורשות חיבור זמין לאינטרנט.
