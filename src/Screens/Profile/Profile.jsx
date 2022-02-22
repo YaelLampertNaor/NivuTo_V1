@@ -45,7 +45,7 @@ export default function Profile(props) {
             <br />
             <div>
             <p className='h6'>מערכת השעות שלך:</p>
-            <Table style={{width:`120%`}}>
+            <Table style={{width:`120%`, color:'white'}}>
                 <thead>
                     <tr>
                         <th style={{ textAlign:'right', color:'white' }}>שיעור</th>
