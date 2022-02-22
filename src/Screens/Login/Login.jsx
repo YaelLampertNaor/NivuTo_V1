@@ -39,7 +39,7 @@ export default function Login(props) {
                 <input style={{borderRadius:'7%'}} onChange={event => setPassword(event.target.value)} value={password} type="password" id="loginPassword" class="form-control" placeholder="סיסמא" />
                 <label for="loginPassword">סיסמא:</label>
             </div>
-            <button style={{ blockSize: '40px', width: '70px', marginRight: '60px', marginTop: '20px' }} class="btn btn-primary" onClick={LoginBtnClick}>כניסה</button>
+            <button style={{ blockSize: '40px', width: '70px', marginRight: '60px', marginTop: '20px' }} class="btn btn-success" onClick={LoginBtnClick}>כניסה</button>
             </div>
         </div>
     )

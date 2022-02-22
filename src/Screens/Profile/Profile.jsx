@@ -38,7 +38,7 @@ export default function Profile(props) {
 
 
     return (
-        <div className='container'>
+        <div className='container' style={{color:'white'}}>
             <img src="https://www.pngitem.com/pimgs/m/638-6381558_time-shift-software-flat-icon-student-girl-hd.png" style={{ blockSize: '190px', borderRadius: '100px', border: '1px solid black', display: 'flex', flexDirection: 'row', justifyContent: 'center', marginTop:'25px', marginBottom:'15px' }} class="img-thumbnail" alt="Add profile picture"></img>
             <p className='h6'>שלום {currentUser.firstName},</p>
             <br />
@@ -48,26 +48,30 @@ export default function Profile(props) {
             <Table style={{width:`120%`}}>
                 <thead>
                     <tr>
-                        <th style={{ textAlign:'right' }}>שיעור</th>
-                        <th style={{ textAlign:'right' }}>יום</th>
-                        <th style={{ textAlign:'right' }}>שעת התחלה</th>
-                        <th style={{ textAlign:'right' }}>שעת סיום</th>
-                        <th style={{ textAlign:'right' }}>מרצה</th>
+                        <th style={{ textAlign:'right', color:'white' }}>שיעור</th>
+                        <th style={{ textAlign:'right', color:'white' }}>יום</th>
+                        <th style={{ textAlign:'right', color:'white' }}>שעת התחלה</th>
+                        <th style={{ textAlign:'right', color:'white' }}>שעת סיום</th>
+                        <th style={{ textAlign:'right', color:'white' }}>מרצה</th>
                     </tr>
                 </thead>
                 <tbody>
                     {sety1.map((lesson, index) =>
                         <tr key={index}>
-                            <td className='courseName' style={{ textAlign:'right'}}>{lesson.courseName}</td>
-                            <td style={{ textAlign:'right' }} className='day'>{lesson.day}</td>
-                            <td><span className='hour' style={{ textAlign:'right'}}>{lesson.start}</span></td>
-                            <td><span className='hour' style={{ textAlign:'right' }}>{lesson.end}</span></td>
-                            <td className='lecturer' style={{ textAlign:'right' }}>{lesson.lecturer}<span className='title'>{props.title}</span></td>
+                            <td className='courseName' style={{ textAlign:'right', color:'white'}}>{lesson.courseName}</td>
+                            <td style={{ textAlign:'right', color:'white' }} className='day'>{lesson.day}</td>
+                            <td><span className='hour' style={{ textAlign:'right', color:'white'}}>{lesson.start}</span></td>
+                            <td><span className='hour' style={{ textAlign:'right', color:'white' }}>{lesson.end}</span></td>
+                            <td className='lecturer' style={{ textAlign:'right', color:'white' }}>{lesson.lecturer}<span className='title'>{props.title}</span></td>
                         </tr>
                     )}
                 </tbody>
             </Table>
             </div>
+
+
+
+            
         </div>
     )
 };

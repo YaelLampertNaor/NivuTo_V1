@@ -107,14 +107,14 @@ export default function Register_NewUser(props) {
                 </table>
                 <br />
                 <div class="form-floating" style={{ display: 'flex', flexDirection: 'column', width: '150px' }}>
-                    <h4>הזן פרטי לימודים:</h4>
+                    <h6 style={{color:'white'}}>מוסד לימודים:</h6>
                     <select onChange={(e) => { setSchool(e.target.value) }} style={{borderRadius:'7%', height:'65px', width: '180px', marginBottom:'20px', display:'flex', alignSelf:'center'}} class="form-select" id="floatingStudentType" aria-label="Floating label select example">
                         <option value="1">המרכז האקדמי</option>
                         <option value="2">ביה"ס להנדסאים</option>
                     </select>
                 </div>
                 {school === `1` ? ShowAcademyOption() : ShowEngineerOption()}
-                <button className='btn btn-primary' onClick={registerBtnClick} style={{ width: '100px', marginTop: '30px' }}>הרשמה</button>
+                <button className='btn btn-success' onClick={registerBtnClick} style={{ width: '100px', marginTop: '30px', marginBottom:'15px' }}>הרשמה</button>
             </form>
         </div>
     </div >

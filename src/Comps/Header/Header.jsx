@@ -13,13 +13,13 @@ export default function Header() {
       </div>
       <div style={{display:'flex', flexDirection:'row'}}>
         <span>
-          <Link to="/">דף הבית</Link>
+          <Link to="/" style={{color:'black'}}>דף הבית</Link>
         </span>
         <span style={{marginRight:'50px'}}>
-          <Link to="/login">כניסה</Link>
+          <Link to="/login" style={{color:'black'}}>כניסה</Link>
         </span>
         <span style={{marginRight:'50px'}}>
-          <Link to="/register">הרשמה</Link>
+          <Link to="/register" style={{color:'black'}}>הרשמה</Link>
         </span>
       </div>
     </div>

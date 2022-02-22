@@ -4,8 +4,8 @@ import { UserContext } from '../../Context/UserContext';
 export default function EditUserForm(props) {
     const {EditUser} = useContext(UserContext)
     return (<div>
-        <h1 style={{ textAlign: 'center' }}>עדכון פרטים אישיים</h1>
-        <div style={{borderStyle:'groove', padding:'50px'}}>
+        <h1 style={{ textAlign: 'center' }}>עדכון פרטים</h1>
+        <div style={{borderStyle:'groove', color:'white', padding:'50px'}}>
             <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <table>
                     <tr>
@@ -30,7 +30,7 @@ export default function EditUserForm(props) {
                     </tr>
                 </table>
                 <br />
-                <button className='btn btn-primary' onClick={()=>{
+                <button className='btn btn-success' onClick={()=>{
                     EditUser(props.user);
                     props.setVisibility(false);
                     }} style={{ width: '100px', marginTop: '30px' }}>עדכון</button>
