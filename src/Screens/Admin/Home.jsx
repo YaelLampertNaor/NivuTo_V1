@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div style={{textAlign:'center'}}>
       <h1 style={{marginTop:'15px'}}>טבלת משתמשים</h1>
-        <table style={{}}>
+        <table>
           {
           users.map((user, index)=>
           user.email!=`admin@admin.com` ?

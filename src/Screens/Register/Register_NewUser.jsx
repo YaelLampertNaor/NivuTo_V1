@@ -1,6 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import Login from '../Login/Login';
 import { UserContext } from '../../Context/UserContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,7 +14,6 @@ export default function Register_NewUser(props) {
         if(AddUser(user))
             {
                 alert(`נרשמת בהצלחה`)
-                alert(user.lastName)
                 navigate(`/login`)
             }
         else{
