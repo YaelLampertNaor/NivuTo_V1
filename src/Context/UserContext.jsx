@@ -16,7 +16,7 @@ export default function UserContextProvider(props) {
         },
         {
             firstName: `יעל`,
-            lastName: `נאור`,
+            lastName: `למפרט נאור`,
             dob: `2000-05-03`,
             email:`yael@yael.com`,
             password: `abc111`,
